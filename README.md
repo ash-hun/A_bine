@@ -11,6 +11,7 @@
 ## **🤟 Contributor**
 ...
 ## **💻 A-Bine Service Architecture**
-![service Architecture]("https://github.com/JH9892/A_bine/blob/main/ref/architecture%20design/A-Bine%20Service%20Architecture.png")  
+
+![service Architecture](https://github.com/JH9892/A_bine/blob/main/ref/architecture_design/our_architecture.png)  
 
 --- 
