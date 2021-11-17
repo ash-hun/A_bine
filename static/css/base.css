@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Hills;
+    src: url("../src/font/HillsofMarbellaalt.-Regular.otf");
+}
+
+@font-face {
+    font-family: Aqala;
+    src: url("../src/font/Aqala\ Display\ Free.ttf");
+}
+
+@font-face {
+    font-family: YoonGothic330;
+    src: url("../src/font/윤고딕330.ttf");
+}
+
+/*-------------- Basic Setting --------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1920px;
+    max-height: 1200px;
+    width: 1920px;
+    height: 1200px;
+    border: 1px solid white;
+}

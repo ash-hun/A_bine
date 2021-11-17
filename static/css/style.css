@@ -1,7 +1,50 @@
-* {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
+/* Intro Page Styling */
+.container{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0,0,0,0.9);
 }
 
+.mainArea{
+    width: 40vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#deco {
+    font-family: Hills;
+    font-size: 48px;
+    color: white;
+}
+
+#serviceTitle {
+    font-family: Aqala;
+    font-weight: 100;
+    font-size: 200px;
+    color: white;
+}
+
+#titleExplain {
+    font-family: YoonGothic330;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+}
+
+#enterBtn {
+    width: 270px;
+    height: 75px;
+    margin-top: 10%;
+    font-family: YoonGothic330;
+    font-size: 18px;
+    padding: 15px;
+    color: rgb(248,182,45);
+    background-color: transparent;
+    border: 1px solid rgb(248,182,45);
+}
