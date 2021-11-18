@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/base.css">
-        <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/headNav.css">
+        <link rel="stylesheet" href="../css/setting.css">
         <title>A-Bine</title>
     </head>
     <body>
@@ -58,14 +58,26 @@
                     </ul>
                 </nav>
             </div>
-            <div class="mainArea">
-                <p id="deco">Hello</pid>
-                <h1 id="serviceTitle">A-bine</h1>
-                <p id="titleExplain">A-Bine is a wine celler with complex functions that gives
-                    you more value than storage.
-                    <br/>Beyond simple wine storage. we provides more comportable experience
-                    <br/>such as recommendations, recipes, and controls through displays.</p>
+            
+            <div class="settingArea">
+                <div class="centerComponents">
+                    <div class="showTitle">
+                        <p id="pageTitle">Setting</p>
+                    </div>
+                    <div class="showTemp">
+                        <p id="tempValue">13℃</p>
+                        <p id="valueExplain">Temperature</p>
+                    </div>
+                </div>
+                <div class="sideButton">
+                    <div class="unlockSwtich">
+                        <img src="../src/image/page 4/unlock.png" alt="lock icon">
+                        <input type="checkbox" id="switch" />
+                        <label class="swtichLabel" for="switch"></label>
+                    </div>
+                </div>
             </div>
+            
         </div>
         <script src="../js/main.js"></script>
     </body>

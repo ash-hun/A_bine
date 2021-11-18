@@ -13,6 +13,16 @@
     src: url("../src/font/윤고딕330.ttf");
 }
 
+@font-face{
+    font-family: GimhaeB;
+    src: url("../src/font/GimhaeGayaB.otf");
+}
+
+@font-face{
+    font-family: GimhaeR;
+    src: url("../src/font/GimhaeGayaR.otf");
+}
+
 /*-------------- Basic Setting --------------*/
 
 * {
