@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/headNav.css">
+        <link rel="stylesheet" href="../css/liquor_wine.css">
+        <title>A-Bine</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <div id="home">
+                    <a href="./main.html">
+                        <img src="./../src/image/page 2/test.png" alt="home"/>
+                    </a>
+                </div>
+                <div id="showing">
+                    <div class="valueWrapper">
+                        <div class="temp">
+                            <p id="temperature">12.6℃</p>
+                        </div>
+                        <p id="humidity">60%</p>
+                    </div>
+                </div>
+                <a href="#" class="menu-trigger" id="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div id="menuWrap" class="clicked">
+                <nav id="menu">
+                    <ul class="menulist">
+                        <li class="listStyle">
+                            <a href="./liquor_wine.html">Liquor</a>
+                        </li>
+                        <li class="listStyle">
+                            <a href="#">Mood</a>
+                        </li>
+                        <li class="listStyle">
+                            <a href="#">Offer</a>
+                        </li>
+                        <li class="listStyle">
+                            <a href="./setting.html">Setting</a>
+                        </li>
+                        <div class="lightSwtich">
+                            <img src="../src/image/page 3/light_icon.png" alt="wineCeller_innerLight">
+                            <input type="checkbox" id="switch1" name="switch1" class="input__on-off">
+                            <label for="switch1" class="label__on-off">
+                                <span class="marble"></span>
+                                <span class="on"></span>
+                                <span class="off"></span>
+                            </label>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <!-- This Page main contents : Liquor Area -->
+            <div class="liquorArea">
+                <div class="upperMenu">
+                    <ul>
+                        <li>
+                            <a href="#">Whiskey</a>
+                        </li>
+                        <li>
+                            <a href="./liquor_wine.html" style="color:white;">Wine</a>
+                        </li>
+                        <li>
+                            <a href="#">Cocktail</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="wineArea">
+                    <div class="wineImg">
+                        <img src="../src/image/page 5/G7_wine.png" alt="G7 Wine">
+                    </div>
+                    <div class="wineExplain">
+                        <h1>G7<br/>CABERNET SAUVIGNON</h1>
+                        <p>
+                            자줏빛이 감도는 적색을 띠고 있으며 블랙체리, 딸기의 풍부한 향과 달콤한 모카향.<br/>
+                            초콜릿 여운이 복합적인 아로마를 형상합니다. 입안에서 벨벳처럼 부드러운 타닌의<br/>
+                            감촉과 풍부한 과일 맛, 적당한 신미가 균형감을 이루어 다양한 종류의 음시고가 곁들여<br/>
+                            마시기 좋습니다.
+                        </p>
+                        <p>
+                            Type: Red wine<br>
+                            Alcohol: 13.5<br>
+                            Origin/Country: Chile<br>
+                        </p>
+                        <div class="optionalItem">
+                            <div class="snackArea">
+
+                            </div>
+                            <div class="similarArea">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/main.js"></script>
+        <script src="../js/setting.js"></script>
+    </body>
+</html>

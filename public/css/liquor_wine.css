@@ -1,0 +1,77 @@
+/* Liquor Page Styling */
+.container {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+    background-color: rgb(0,0,0,0.9);
+}
+
+.liquorArea{
+    width:1280px;
+    height:700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upperMenu{
+    margin-top:200px;
+    padding-bottom: 45px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.upperMenu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.upperMenu ul li{
+    list-style: none;
+}
+
+.upperMenu ul li a{
+    text-decoration: none;
+    color: gray;
+    font-family: GimhaeB;
+    font-size:18px;
+    margin-top:20px;
+    margin-right: 70px;
+    margin-left: 70px;
+    transition: ease-in-out 0.2s;
+}
+
+.upperMenu ul li a:hover {
+    color: white;
+}
+
+.wineArea{
+    width: inherit;
+    height: 600px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.wineImg{
+    width: 40%;
+    height: 100%;
+    /* background-color: white; */
+}
+
+.wineImg img{
+    padding-top: 15px;
+    height:80%;
+    object-fit:contain;
+    padding-left: 220px;
+}

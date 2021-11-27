@@ -1,0 +1,39 @@
+@font-face {
+    font-family: Hills;
+    src: url("../src/font/HillsofMarbellaalt.-Regular.otf");
+}
+
+@font-face {
+    font-family: Aqala;
+    src: url("../src/font/Aqala\ Display\ Free.ttf");
+}
+
+@font-face {
+    font-family: YoonGothic330;
+    src: url("../src/font/윤고딕330.ttf");
+}
+
+@font-face{
+    font-family: GimhaeB;
+    src: url("../src/font/GimhaeGayaB.otf");
+}
+
+@font-face{
+    font-family: GimhaeR;
+    src: url("../src/font/GimhaeGayaR.otf");
+}
+
+/*-------------- Basic Setting --------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1280px;
+    max-height: 800px;
+    width: 1280px;
+    height: 800px;
+    border: 1px solid white;
+}

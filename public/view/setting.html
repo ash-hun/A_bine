@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/headNav.css">
+        <link rel="stylesheet" href="../css/setting.css">
+        <title>A-Bine</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <div id="home">
+                    <a href="./main.html">
+                        <img src="../src/image/page 2/test.png" alt="home"/>
+                    </a>
+                </div>
+                <div id="showing">
+                    <div class="valueWrapper">
+                        <div class="temp">
+                            <p id="temperature">12.6℃</p>
+                        </div>
+                        <p id="humidity">60%</p>
+                    </div>
+                </div>
+                <a href="#" class="menu-trigger" id="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div id="menuWrap" class="clicked">
+                <nav id="menu">
+                    <ul class="menulist">
+                        <li class="listStyle">
+                            <a href="./liquor_wine.html">Liquor</a>
+                        </li>
+                        <li class="listStyle">
+                            <a href="#">Mood</a>
+                        </li>
+                        <li class="listStyle">
+                            <a href="#">Offer</a>
+                        </li>
+                        <li class="listStyle">
+                            <a href="./setting.html">Setting</a>
+                        </li>
+                        <div class="lightSwtich">
+                            <img src="../src/image/page 3/light_icon.png" alt="wineCeller_innerLight">
+                            <input type="checkbox" id="switch1" name="switch1" class="input__on-off">
+                            <label for="switch1" class="label__on-off">
+                                <span class="marble"></span>
+                                <span class="on"></span>
+                                <span class="off"></span>
+                            </label>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="settingArea">
+                <div class="centerComponents">
+                    <div class="showTitle">
+                        <p id="pageTitle">Setting</p>
+                    </div>
+                    <div class="showTemp">
+                        <p id="tempValue">13℃</p>
+                        <p id="valueExplain">Temperature</p>
+                    </div>
+                </div>
+                <div class="sideButton">
+                    <div class="unlockSwtich">
+                        <img src="../src/image/page 4/unlock.png" alt="lock icon">
+                        <input type="checkbox" id="switch" />
+                        <label class="swtichLabel" for="switch"></label>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <script src="../js/main.js"></script>
+        <script src="../js/setting.js"></script>
+    </body>
+</html>

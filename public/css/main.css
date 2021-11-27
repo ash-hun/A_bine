@@ -1,0 +1,38 @@
+/* Main Page Styling */
+.container {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0,0,0,0.9);
+}
+
+.mainArea {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#deco {
+    font-family: Hills;
+    font-size: 36px;
+    color: white;
+}
+
+#serviceTitle {
+    font-family: Aqala;
+    font-weight: 100;
+    font-size: 150px;
+    color: white;
+}
+
+#titleExplain {
+    font-family: YoonGothic330;
+    font-size: 13.5px;
+    text-align: center;
+    color: white;
+}
