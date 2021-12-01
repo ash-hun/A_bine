@@ -20,9 +20,9 @@
                 <div id="showing">
                     <div class="valueWrapper">
                         <div class="temp">
-                            <p id="temperature">12.6℃</p>
+                            <p id="temperature"></p>
                         </div>
-                        <p id="humidity">60%</p>
+                        <p id="humidity"></p>
                     </div>
                 </div>
                 <a href="#" class="menu-trigger" id="menuBtn">
@@ -63,7 +63,7 @@
                 <div class="upperMenu">
                     <ul>
                         <li>
-                            <a href="#">Whiskey</a>
+                            <a href="./liquor_whiskey.html">Whiskey</a>
                         </li>
                         <li>
                             <a href="./liquor_wine.html" style="color:white;">Wine</a>
@@ -74,35 +74,101 @@
                     </ul>
                 </div>
                 <div class="wineArea">
-                    <div class="wineImg">
-                        <img src="../src/image/page 5/G7_wine.png" alt="G7 Wine">
+                    <div class="arrow">
+                        <img src="../src/image/page 5/left_arrow.png" alt="left_arrow">
                     </div>
-                    <div class="wineExplain">
-                        <h1>G7<br/>CABERNET SAUVIGNON</h1>
-                        <p>
-                            자줏빛이 감도는 적색을 띠고 있으며 블랙체리, 딸기의 풍부한 향과 달콤한 모카향.<br/>
-                            초콜릿 여운이 복합적인 아로마를 형상합니다. 입안에서 벨벳처럼 부드러운 타닌의<br/>
-                            감촉과 풍부한 과일 맛, 적당한 신미가 균형감을 이루어 다양한 종류의 음시고가 곁들여<br/>
-                            마시기 좋습니다.
-                        </p>
-                        <p>
-                            Type: Red wine<br>
-                            Alcohol: 13.5<br>
-                            Origin/Country: Chile<br>
-                        </p>
-                        <div class="optionalItem">
-                            <div class="snackArea">
-
-                            </div>
-                            <div class="similarArea">
-
+                    <div class="slideContents">
+                        <div class="wineImg">
+                            <img src="../src/image/page 5/G7_wine.png" alt="G7 Wine">
+                        </div>
+                        <div class="wineExplain">
+                            <h1>G7<br/>CABERNET SAUVIGNON</h1>
+                            <p>
+                                자줏빛이 감도는 적색을 띠고 있으며 블랙체리, 딸기의 풍부한 향과 달콤한 모카 향.<br/>
+                                초콜릿 여운이 복합적인 아로마를 형상합니다. 입안에서 벨벳처럼 부드러운 타닌의<br/>
+                                감촉과 풍부한 과일 맛, 적당한 신미가 균형감을 이루어 다양한 종류의 음시고가 곁들여<br/>
+                                마시기 좋습니다.
+                            </p>
+                            <p>
+                                Type: Red wine<br>
+                                Alcohol: 13.5<br>
+                                Origin/Country: Chile<br>
+                            </p>
+                            <div class="optionalItem">
+                                <div class="snackArea">
+                                    <h3>Snack</h3>
+                                    <div class="snackList">
+                                        <img src="../src/image/page 5/G7_snack01.png" alt="snackList"/>
+                                        <img src="../src/image/page 5/G7_snack02.png" alt="snackList"/>
+                                        <img src="../src/image/page 5/G7_snack03.png" alt="snackList"/>
+                                    </div>
+                                </div>
+                                <div class="similarArea">
+                                    <h3>Liquor</h3>
+                                    <div class="similarList">
+                                        <img src="../src/image/page 5/G7_similar.png" alt="snackList"/>
+                                        <p></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="arrow">
+                        <img src="../src/image/page 5/right_arrow.png" alt="right_arrow">
+                    </div>
                 </div>
+            </div>
+            <div class="wine_background_img">
+                <img src="../src/image/page 5/G7_background.png" alt="wine_background_img">
             </div>
         </div>
         <script src="../js/main.js"></script>
         <script src="../js/setting.js"></script>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+            import { getDatabase, ref, set, child, update, remove, onValue, get } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyB3pUnkTb9q-XLceiLcXmKdpiqiNOpa0mg",
+                authDomain: "abine-b526f.firebaseapp.com",
+                databaseURL: "https://abine-b526f-default-rtdb.firebaseio.com",
+                projectId: "abine-b526f",
+                storageBucket: "abine-b526f.appspot.com",
+                messagingSenderId: "866638993783",
+                appId: "1:866638993783:web:7fe7fe6e6b0c5e622b2972"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const db = getDatabase();
+
+            var temperature = document.getElementById("temperature");
+            var humidity = document.getElementById("humidity");
+            
+            function read_humidity(){
+                onValue(ref(db, "/humidity"), (snapshot)=>{
+                    const data = snapshot.val();
+                    console.log("Humidity Value : "+ data);
+                    humidity.innerText = data+"％";
+                });
+            }
+
+            function read_temperature(){
+                onValue(ref(db, "/temperature"), (snapshot)=>{
+                    const data = snapshot.val();
+                    console.log("temperature Value : "+ data);
+                    temperature.innerText = data+"℃";
+                });
+            }
+
+            setInterval(read_temperature, 50);
+            setInterval(read_humidity, 50);
+        </script>
+        <script>
+
+        </script>
     </body>
 </html>

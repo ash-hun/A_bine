@@ -1,6 +1,15 @@
 // Import the functions you need from the SDKs you need
 import {initializeApp} from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
 import {getAnalytics} from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
+import {getDatabase} from "firebase/database";
+
+const database = getDatabase();
+database.ref('test/').set({"name":"테스트"});
+
+var dbTest = database.ref('test/');
+dbTest.on('child_added', function(data){
+    console.log(data.val());
+})
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries Your web app's
 // Firebase configuration For Firebase JS SDK v7.20.0 and later, measurementId
@@ -19,3 +28,4 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
