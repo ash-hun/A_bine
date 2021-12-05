@@ -31,4 +31,4 @@
 4. 제품 내 조명조절 및 와인셀러 내부의 조명을 제어할 것!
 
 ## **💻 A-Bine Service Architecture**
-![service Architecture](https://github.com/JH9892/A_bine/blob/main/ref/architecture_design/our_architecture.png)  
+![service Architecture](https://github.com/JH9892/A_bine/blob/main/ref/Service%20Architecture/Prototype%20Architecture.png)  
