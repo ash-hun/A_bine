@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/headNav.css">
+        <link rel="stylesheet" href="../css/liquor_whiskey_3.css">
+        <title>A-Bine</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <div id="home">
+                    <a href="./main.html">
+                        <img src="./../src/image/page 2/test.png" alt="home"/>
+                    </a>
+                </div>
+                <div id="showing">
+                    <div class="valueWrapper">
+                        <div class="temp">
+                            <p id="temperature"></p>
+                        </div>
+                        <p id="humidity"></p>
+                    </div>
+                </div>
+                <a href="#" class="menu-trigger" id="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div id="menuWrap" class="clicked">
+                <nav id="menu">
+                    <ul class="menulist">
+                        <li class="listStyle">
+                            <a href="./liquor_wine.html">Liquor</a>
+                        </li>
+                        <li class="listStyle">
+                            <a href="#">Mood</a>
+                        </li>
+                        <li class="listStyle">
+                            <a href="#">Offer</a>
+                        </li>
+                        <li class="listStyle">
+                            <a href="./setting.html">Setting</a>
+                        </li>
+                        <div class="lightSwtich">
+                            <img src="../src/image/page 3/light_icon.png" alt="wineCeller_innerLight">
+                            <input type="checkbox" id="switch1" name="switch1" class="input__on-off">
+                            <label for="switch1" class="label__on-off">
+                                <span class="marble"></span>
+                                <span class="on"></span>
+                                <span class="off"></span>
+                            </label>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <!-- This Page main contents : Liquor Area -->
+            <div class="liquorArea">
+                <div class="upperMenu">
+                    <ul>
+                        <li>
+                            <a href="./liquor_whiskey.html" style="color:white;">Whiskey</a>
+                        </li>
+                        <li>
+                            <a href="./liquor_wine.html">Wine</a>
+                        </li>
+                        <li>
+                            <a href="./liquor_cocktail.html">Cocktail</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="whiskeyArea">
+                    <div class="arrow">
+                        <img 
+                            src="../src/image/page 5/left_arrow.png" 
+                            alt="left_arrow"
+                            onclick="location.href='./liquor_whiskey_2.html'"">
+                    </div>
+                    <div class="slideContents">
+                        <div class="whiskeyExplain">
+                            <h1 class="whiskey_main">ITALICUS</h1>
+                            <p>
+                                식전주로 가볍게 즐기는 고대의 '로솔리오(Rosolio)'레시피를<br/>
+                                복원해서 출시한 리큐르 브랜드로 로솔리오 장미 꽃잎에<br/>
+                                추출한 장미수와 여러 향신료, 설탕을 넣어 만든 15세기<br/>
+                                고대로부터 내려오던 이탈리아 전통주입니다.<br/>
+                                로솔리오 레시피에 일일이 수작업(스푸마투라 Sfumatura)으로<br/>
+                                얻은 최상의 베르가뭇 에센셜 오일을 더해 변형되어 만들어진<br/>
+                                것이 바로 '이탈리쿠스'로 편안하게 즐기기 좋은 리큐르입니다.
+                            </p>
+                            <p class="detail_whiskey">
+                                Scent : Subtle flower scent<br>
+                                Alchol: 20<br>
+                                Origin : Italy<br>
+                            </p>
+                        </div>
+                        <div class="whiskeyImg">
+                            <img src="../src/image/page 8/italicus.png" alt="MACALLAN">
+                        </div>
+                        <div class="optionalItem">
+                            <div class="snackArea">
+                                <h3>Snack</h3>
+                                <div class="snackList">
+                                    <img src="../src/image/page 8/italicus_snack.png" alt="snackList"/>                                </div>
+                            </div>
+                            <div class="similarArea">
+                                <h3>Liquor</h3>
+                                <div class="similarList">
+                                    <img src="../src/image/page 8/italicus_similar.png" alt="snackList"/>
+                                    <p class="similar_explain">Negroni Bianco</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <img 
+                            src="../src/image/page 5/right_arrow.png"
+                            alt="right_arrow"
+                            onclick="location.href='./liquor_whiskey_4.html'">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/main.js"></script>
+        <script src="../js/setting.js"></script>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+            import { getDatabase, ref, set, child, update, remove, onValue, get } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyB3pUnkTb9q-XLceiLcXmKdpiqiNOpa0mg",
+                authDomain: "abine-b526f.firebaseapp.com",
+                databaseURL: "https://abine-b526f-default-rtdb.firebaseio.com",
+                projectId: "abine-b526f",
+                storageBucket: "abine-b526f.appspot.com",
+                messagingSenderId: "866638993783",
+                appId: "1:866638993783:web:7fe7fe6e6b0c5e622b2972"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const db = getDatabase();
+
+            var temperature = document.getElementById("temperature");
+            var humidity = document.getElementById("humidity");
+            
+            function read_humidity(){
+                onValue(ref(db, "/humidity"), (snapshot)=>{
+                    const data = snapshot.val();
+                    console.log("Humidity Value : "+ data);
+                    humidity.innerText = data+"％";
+                });
+            }
+
+            function read_temperature(){
+                onValue(ref(db, "/temperature"), (snapshot)=>{
+                    const data = snapshot.val();
+                    console.log("temperature Value : "+ data);
+                    temperature.innerText = data+"℃";
+                });
+            }
+
+            setInterval(read_temperature, 50);
+            setInterval(read_humidity, 50);
+        </script>
+        <script>
+
+        </script>
+    </body>
+</html>

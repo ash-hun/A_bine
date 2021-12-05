@@ -1,0 +1,190 @@
+/* Liquor Page Styling */
+.container {
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+    background-color: rgb(0,0,0);
+}
+
+.liquorArea{
+    width:1278px;
+    height:700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upperMenu{
+    margin-top:200px;
+    padding-bottom: 45px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.upperMenu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.upperMenu ul li{
+    list-style: none;
+}
+
+.upperMenu ul li a{
+    text-decoration: none;
+    color: gray;
+    font-family: GimhaeB;
+    font-size:18px;
+    margin-top:20px;
+    margin-right: 70px;
+    margin-left: 70px;
+    transition: ease-in-out 0.2s;
+}
+
+.upperMenu ul li a:hover {
+    color: white;
+}
+
+.wineArea{
+    width: inherit;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.wineExplain {
+    padding-left: 100px;
+}
+
+.slideContents{
+    width: 1151px;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.wineImg{
+    width: 40%;
+    height: 100%;
+}
+
+.wineImg img{
+    position: relative;
+    width: 1000px;
+    right: 150px;
+    left: 40px;
+    top: 30px;
+    object-fit:contain;
+}
+
+.wineExplain h1{
+    color: rgba(248, 182, 45);
+    font-family: Aqala;
+    font-size: 60px;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+}
+
+.wineExplain p{
+    margin-top: 18px;
+    margin-bottom: 18px;
+    color: white;
+    font-size: 13px;
+    font-family: YoonGothic330;
+    line-height:2;
+}
+
+.arrow {
+    width: 64px;
+    cursor: pointer;
+}
+
+.right_arrow {
+    position: relative;
+}
+
+.left_arrow {
+    position: relative;
+    left: 30px;
+}
+
+.arrow img{
+    width: 32px;
+    height: 48px;
+    contain: cover;
+}
+
+.optionalItem {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.snackArea{
+    width: 50%;
+    padding-right: 25px;
+}
+
+.snackArea h3{
+    color: white;
+    font-family: GimhaeR;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.snackList{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.snackList img {
+    width: 30%;
+    contain: cover;
+    padding-right: 10px;
+}
+
+.similarArea{
+    width: 50%;
+}
+
+.similarArea h3{
+    color: white;
+    font-family: GimhaeR;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.similarList{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.similarList img{
+    width: 13%;
+    contain: cover;
+    padding-right: 10px;
+}
+
+.similarList p{
+    font-weight: lighter;
+    font-size: 10px;
+    font-family: GimhaeR;
+    color:rgba(248, 182, 45);
+    margin : 0;
+}

@@ -6,9 +6,11 @@ function toggleStyle() {
     const hasClicked = menuWrap.classList.contains(CLICKED_CLASS);
     if(!hasClicked){
         menuWrap.classList.add(CLICKED_CLASS);
+        menuWrap.style.zIndex="-400";
     }
     else{
         menuWrap.classList.remove(CLICKED_CLASS);
+        menuWrap.style.zIndex="1";
     }
 }
 

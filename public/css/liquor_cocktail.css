@@ -1,0 +1,94 @@
+/* Liquor Page Styling */
+.container {
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+    background-color: rgb(0,0,0);
+}
+
+.liquorArea{
+    width:1278px;
+    height:700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upperMenu{
+    margin-top:200px;
+    padding-bottom: 45px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.upperMenu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.upperMenu ul li{
+    list-style: none;
+}
+
+.upperMenu ul li a{
+    text-decoration: none;
+    color: gray;
+    font-family: GimhaeB;
+    font-size:18px;
+    margin-top:20px;
+    margin-right: 70px;
+    margin-left: 70px;
+    transition: ease-in-out 0.2s;
+}
+
+.upperMenu ul li a:hover {
+    color: white;
+}
+
+.cocktailArea{
+    width: inherit;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideContents{
+    width: 1151px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow {
+    width: 64px;
+    cursor: pointer;
+}
+
+.right_arrow {
+    position: relative;
+}
+
+.left_arrow {
+    position: relative;
+    left: 30px;
+}
+
+.arrow img{
+    width: 32px;
+    height: 48px;
+    contain: cover;
+}

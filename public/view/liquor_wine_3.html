@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/headNav.css">
+        <link rel="stylesheet" href="../css/liquor_wine_3.css">
+        <title>A-Bine</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <div id="home">
+                    <a href="./main.html">
+                        <img src="./../src/image/page 2/test.png" alt="home"/>
+                    </a>
+                </div>
+                <div id="showing">
+                    <div class="valueWrapper">
+                        <div class="temp">
+                            <p id="temperature"></p>
+                        </div>
+                        <p id="humidity"></p>
+                    </div>
+                </div>
+                <a href="#" class="menu-trigger" id="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div id="menuWrap" class="clicked">
+                <nav id="menu">
+                    <ul class="menulist">
+                        <li class="listStyle">
+                            <a href="./liquor_wine.html">Liquor</a>
+                        </li>
+                        <li class="listStyle">
+                            <a href="#">Mood</a>
+                        </li>
+                        <li class="listStyle">
+                            <a href="#">Offer</a>
+                        </li>
+                        <li class="listStyle">
+                            <a href="./setting.html">Setting</a>
+                        </li>
+                        <div class="lightSwtich">
+                            <img src="../src/image/page 3/light_icon.png" alt="wineCeller_innerLight">
+                            <input type="checkbox" id="switch1" name="switch1" class="input__on-off">
+                            <label for="switch1" class="label__on-off">
+                                <span class="marble"></span>
+                                <span class="on"></span>
+                                <span class="off"></span>
+                            </label>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <!-- This Page main contents : Liquor Area -->
+            <div class="liquorArea">
+                <div class="upperMenu">
+                    <ul>
+                        <li>
+                            <a href="./liquor_whiskey.html">Whiskey</a>
+                        </li>
+                        <li>
+                            <a href="./liquor_wine.html" style="color:white;">Wine</a>
+                        </li>
+                        <li>
+                            <a href="./liquor_cocktail.html">Cocktail</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="wineArea">
+                    <div class="arrow left_arrow">
+                        <img 
+                            src="../src/image/page 5/left_arrow.png"
+                            alt="left_arrow"
+                            onclick="location.href='./liquor_wine.html'">
+                    </div>
+                    <div class="slideContents">
+                        <div class="wineImg">
+                            <img src="../src/image/page 11/1865.png" alt="wine_background_img">
+                        </div>
+                        <div class="wineExplain">
+                            <h1>1865<br/>CABERNET SAUVIGNON</h1>
+                            <p>
+                                짙은 흙내음이 풍부한 검붉은 과실향을 머금고 있습니다. 특히 바닐라, 부드러운<br/>
+                                토스트의 기운이 잘 어우러져 복합적인 아로마를 형성한다. 풀 바디의 와인으로 치즈<br/>
+                                육류와 잘 어울립니다.
+                            </p>
+                            <p>
+                                Type: Red wine<br>
+                                Alcohol: 14.5<br>
+                                Origin/Country: Chile<br>
+                            </p>
+                            <div class="optionalItem">
+                                <div class="snackArea">
+                                    <h3>Snack</h3>
+                                    <div class="snackList">
+
+                                        <img src="../src/image/page 11/1865_snack_01.png" alt="snackList"/>
+                                        <img src="../src/image/page 11/1865_snack_02.png" alt="snackList"/>
+                                    </div>
+                                </div>
+                                <div class="similarArea">
+                                    <h3>Liquor</h3>
+                                    <div class="similarList">
+                                        <img src="../src/image/page 11/1865_similar.png" alt="snackList"/>
+                                        <p>SANTA RITA, 120<br/>CABERNET SAUVIGNON</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrow right_arrow">
+                        <img
+                            src="../src/image/page 5/right_arrow.png"
+                            alt="right_arrow"
+                            onclick="location.href='./liquor_wine_4.html'">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/main.js"></script>
+        <script src="../js/setting.js"></script>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+            import { getDatabase, ref, set, child, update, remove, onValue, get } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyB3pUnkTb9q-XLceiLcXmKdpiqiNOpa0mg",
+                authDomain: "abine-b526f.firebaseapp.com",
+                databaseURL: "https://abine-b526f-default-rtdb.firebaseio.com",
+                projectId: "abine-b526f",
+                storageBucket: "abine-b526f.appspot.com",
+                messagingSenderId: "866638993783",
+                appId: "1:866638993783:web:7fe7fe6e6b0c5e622b2972"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const db = getDatabase();
+
+            var temperature = document.getElementById("temperature");
+            var humidity = document.getElementById("humidity");
+            
+            function read_humidity(){
+                onValue(ref(db, "/humidity"), (snapshot)=>{
+                    const data = snapshot.val();
+                    console.log("Humidity Value : "+ data);
+                    humidity.innerText = data+"％";
+                });
+            }
+
+            function read_temperature(){
+                onValue(ref(db, "/temperature"), (snapshot)=>{
+                    const data = snapshot.val();
+                    console.log("temperature Value : "+ data);
+                    temperature.innerText = data+"℃";
+                });
+            }
+
+            setInterval(read_temperature, 50);
+            setInterval(read_humidity, 50);
+        </script>
+        <script>
+
+        </script>
+    </body>
+</html>
+</html>

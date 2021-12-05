@@ -2,15 +2,16 @@
 .container {
     width: inherit;
     height: inherit;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content:space-between;
     align-items:center;
-    background-color: rgb(0,0,0,0.9);
+    background-color: rgb(0,0,0);
 }
 
 .liquorArea{
-    width:1280px;
+    width:1278px;
     height:700px;
     display: flex;
     flex-direction: column;
@@ -68,7 +69,7 @@
 }
 
 .slideContents{
-    width: 1152px;
+    width: 1151px;
     height: inherit;
     display: flex;
     flex-direction: row;
@@ -79,14 +80,15 @@
 .wineImg{
     width: 40%;
     height: 100%;
-    /* background-color: white; */
 }
 
 .wineImg img{
-    padding-top: 15px;
-    height:80%;
+    position: relative;
+    width: 1000px;
+    right: 150px;
+    left: 40px;
+    top: 30px;
     object-fit:contain;
-    padding-left: 220px;
 }
 
 .wineExplain h1{
@@ -106,27 +108,42 @@
     line-height:2;
 }
 
-.arrow img{
+.arrow {
     width: 64px;
-    height: 64px;
-    padding-right: 25px;
-    padding-left: 25px;
+    cursor: pointer;
+}
+
+.right_arrow {
+    position: relative;
+}
+
+.left_arrow {
+    position: relative;
+    left: 30px;
+
+}
+.arrow img{
+    width: 32px;
+    height: 48px;
+    contain: cover;
 }
 
 .optionalItem {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .snackArea{
     width: 50%;
+    padding-right: 25px;
 }
 
 .snackArea h3{
     color: white;
     font-family: GimhaeR;
     font-size: 18px;
+    margin-bottom: 5px;
 }
 
 .snackList{
@@ -136,7 +153,7 @@
 }
 
 .snackList img {
-    width: 25%;
+    width: 30%;
     contain: cover;
     padding-right: 10px;
 }
@@ -149,27 +166,25 @@
     color: white;
     font-family: GimhaeR;
     font-size: 18px;
+    margin-bottom: 5px;
 }
 
 .similarList{
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: flex-end;
 }
 
 .similarList img{
-    width: 7%;
+    width: 13%;
     contain: cover;
+    padding-right: 10px;
 }
 
-.wine_background_img{
-    width: 1275px;
-    height: 95px;
-}
-
-.wine_background_img img{
-    width: 75%;
-    z-index: 0;
-    position: relative;
-    bottom: 100px;
+.similarList p{
+    font-weight: lighter;
+    font-size: 10px;
+    font-family: GimhaeR;
+    color:rgba(248, 182, 45);
+    margin : 0;
 }

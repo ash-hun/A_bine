@@ -1,0 +1,187 @@
+/* Liquor Page Styling */
+.container {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+    background-color: rgb(0,0,0);
+}
+
+.liquorArea{
+    width:1278px;
+    height:700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upperMenu{
+    margin-top:200px;
+    padding-bottom: 45px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.upperMenu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.upperMenu ul li{
+    list-style: none;
+}
+
+.upperMenu ul li a{
+    text-decoration: none;
+    color: gray;
+    font-family: GimhaeB;
+    font-size:18px;
+    margin-top:20px;
+    margin-right: 70px;
+    margin-left: 70px;
+    transition: ease-in-out 0.2s;
+}
+
+.upperMenu ul li a:hover {
+    color: white;
+}
+
+.whiskeyArea{
+    width: inherit;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideContents{
+    width: 1152px;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.whiskeyExplain {
+    width: 40%;
+    text-align: right;
+}
+
+.whiskeyImg{
+    width: 23%;
+    height: 100%;
+}
+
+.whiskeyImg img{
+    height: inherit;
+    object-fit:contain;
+}
+
+.whiskey_main{
+    padding-top:100px;
+    color: rgba(248, 182, 45);
+    font-family: Aqala;
+    font-size: 55px;
+}
+
+.whiskey_sub{
+    color: rgba(248, 182, 45);
+    font-family: Aqala;
+    font-size: 28px;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+}
+
+.whiskeyExplain p{
+    margin-top: 18px;
+    margin-bottom: 18px;
+    color: white;
+    font-size: 13px;
+    font-family: YoonGothic330;
+    line-height:1.5;
+}
+
+.detail_whiskey {
+    padding-top: 60px;
+}
+
+.arrow img{
+    width: 64px;
+    height: 64px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.optionalItem {
+    width: 40%;
+    display: flex;
+    margin-top:200px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.snackArea{
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.snackArea h3{
+    color: white;
+    font-family: GimhaeR;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.snackList{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.snackList img {
+    width: 60%;
+    contain: cover;
+}
+
+.similarArea{
+    width: 50%;
+}
+
+.similarArea h3{
+    color: white;
+    font-family: GimhaeR;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.similarList{
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.similarList img{
+    width: 15%;
+    padding-right: 20px;
+    contain: cover;
+}
+
+.similar_explain {
+    width: 70%;
+    font-family: GimhaeR;
+    font-size: 10px;
+    font-weight: lighter;
+    color: rgba(248, 182, 45);
+    padding-top: 120px;
+}
