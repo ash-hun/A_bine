@@ -1,0 +1,73 @@
+/* Liquor Page Styling */
+.container {
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+    background-color: rgb(0,0,0);
+}
+
+.moodArea{
+    width:1278px;
+    height:798px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.moodImg {
+    margin: 0 auto;
+}
+
+.moodImg img{
+    position: relative;
+    top: 100px;
+    width: 500px;
+    height: 500px;
+    contain: cover;
+    cursor: pointer;
+}
+
+.colorPalette {
+    position: relative;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstLine {
+    width: 400px;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.firstLine img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.secondLine {
+    width: 400px;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.secondLine img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
