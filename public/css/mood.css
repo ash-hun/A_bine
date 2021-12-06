@@ -20,22 +20,31 @@
     align-items: center;
 }
 
+.colorPalette p{
+    position: relative;
+    color: white;
+    bottom: 25px;
+}
+
 .moodImg {
     margin: 0 auto;
 }
 
 .moodImg img{
     position: relative;
-    top: 100px;
-    width: 500px;
-    height: 500px;
+    width:1128px;
+    height: 698px;
     contain: cover;
     cursor: pointer;
 }
 
+.clocking {
+    display:none;
+}
+
 .colorPalette {
     position: relative;
-    bottom: 30px;
+    bottom: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,7 +63,16 @@
 .firstLine img {
     width: 30px;
     height: 30px;
+    margin:1.5%;
     cursor: pointer;
+}
+
+.firstLine img:hover {
+    border: 1px solid white;
+    border-radius: 100%;
+    padding:1.5%;
+    margin:0;
+    transition: all 0.2s;
 }
 
 .secondLine {
@@ -69,5 +87,14 @@
 .secondLine img {
     width: 30px;
     height: 30px;
+    margin:1.5%;
     cursor: pointer;
+}
+
+.secondLine img:hover {
+    border: 1px solid white;
+    border-radius: 100%;
+    padding:1.5%;
+    margin:0;
+    transition: all 0.2s;
 }
