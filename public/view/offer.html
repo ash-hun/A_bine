@@ -55,71 +55,25 @@
                     </ul>
                 </nav>
             </div>
-            <!-- This Page main contents : Liquor Area -->
-            <div class="liquorArea">
-                <div class="upperMenu">
-                    <ul>
-                        <li>
-                            <a href="./liquor_whiskey.html">Whiskey</a>
-                        </li>
-                        <li>
-                            <a href="./liquor_wine.html" style="color:white;">Wine</a>
-                        </li>
-                        <li>
-                            <a href="./liquor_cocktail.html">Cocktail</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="wineArea">
-                    <div class="arrow left_arrow">
-                        <img 
-                            src="../src/image/page 5/left_arrow.png"
-                            alt="left_arrow"
-                            onclick="location.href='./liquor_wine_2.html'">
+            <!-- This Page main contents : Offer Area -->
+            <div class="offerArea">
+                <div class="recommand">
+                    <div class="explain">
+                        <h1 id="explain_category">TODAY'S DRINK</h1>
+                        <h1 id="explain_wine">DIAVOLO DEVIL'S BRUT</h1>
+                        <p id="explain_contents"></p>
                     </div>
-                    <div class="slideContents">
-                        <div class="wineImg">
-                            <img src="../src/image/page 5/g7.png" alt="wine_background_img">
-                        </div>
-                        <div class="wineExplain">
-                            <h1>G7<br/>CABERNET SAUVIGNON</h1>
-                            <p>
-                                자줏빛이 감도는 적색을 띠고 있으며 블랙체리, 딸기의 풍부한 향과 달콤한 모카 향.<br/>
-                                초콜릿 여운이 복합적인 아로마를 형상합니다. 입안에서 벨벳처럼 부드러운 타닌의<br/>
-                                감촉과 풍부한 과일 맛, 적당한 신미가 균형감을 이루어 다양한 종류의 음시고가 곁들여<br/>
-                                마시기 좋습니다.
-                            </p>
-                            <p>
-                                Type: Red wine<br>
-                                Alcohol: 13.5<br>
-                                Origin/Country: Chile<br>
-                            </p>
-                            <div class="optionalItem">
-                                <div class="snackArea">
-                                    <h3>Snack</h3>
-                                    <div class="snackList">
-                                        <img src="../src/image/page 5/G7_snack01.png" alt="snackList"/>
-                                        <img src="../src/image/page 5/G7_snack02.png" alt="snackList"/>
-                                        <img src="../src/image/page 5/G7_snack03.png" alt="snackList"/>                                    
-                                    </div>
-                                </div>
-                                <div class="similarArea">
-                                    <h3>Liquor</h3>
-                                    <div class="similarList">
-                                        <img src="../src/image/page 10/cas_similar.png" alt="snackList"/>
-                                        <p>MORANDE GRAN RESERVA<br/>CABERNET SAUVIGNON</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="arrow right_arrow">
-                        <img 
-                            src="../src/image/page 5/right_arrow.png" 
-                            alt="right_arrow"
-                            onclick="location.href='./liquor_wine_3.html'">
+                    <div class="recommand_target">
+                        <img class="weather_sunny" src="../src/image/page 22/sunny_wine_only.png" alt="sunny_wine">
+                        <img class="weather_cloudy nonshowing" src="../src/image/page 22/cloudy_wine.png" alt="cloudy_wine">
+                        <img class="weather_rainy nonshowing" src="../src/image/page 22/rainy_wine.png" alt="rainy_wine">
                     </div>
                 </div>
+            </div>
+            <div class="weatherArea">
+                <img class="weather" src="../src/image/page 22/sunny.png" alt="weather_sunny">
+                <img class="weather nonshowing" src="../src/image/page 22/cloudy.png" alt="weather_cloudy">
+                <img class="weather nonshowing" src="../src/image/page 22/rainy.png" alt="weather_rainy">
             </div>
         </div>
         <script src="../js/main.js"></script>
@@ -166,9 +120,6 @@
 
             setInterval(read_temperature, 50);
             setInterval(read_humidity, 50);
-        </script>
-        <script>
-
         </script>
     </body>
 </html>
