@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/headNav.css">
+        <link rel="stylesheet" href="../css/liquor_cocktail_items.css">
+        <title>A-Bine</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <div id="home">
+                    <a href="./main.html">
+                        <img src="./../src/image/page 2/test.png" alt="home"/>
+                    </a>
+                </div>
+                <div id="showing">
+                    <div class="valueWrapper">
+                        <div class="temp">
+                            <p id="temperature"></p>
+                        </div>
+                        <p id="humidity"></p>
+                    </div>
+                </div>
+                <a href="#" class="menu-trigger" id="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div id="menuWrap" class="clicked">
+                <nav id="menu">
+                    <ul class="menulist">
+                        <li class="listStyle">
+                            <a href="./liquor_wine.html">Liquor</a>
+                        </li>
+                        <li class="listStyle">
+                            <a href="./mood.html">Mood</a>
+                        </li>
+                        <li class="listStyle">
+                            <a href="./offer.html">Offer</a>
+                        </li>
+                        <div class="lightSwtich">
+                            <img src="../src/image/page 3/light_icon.png" alt="wineCeller_innerLight">
+                            <input type="checkbox" id="switch1" name="switch1" class="input__on-off">
+                            <label for="switch1" class="label__on-off">
+                                <span class="marble"></span>
+                                <span class="on"></span>
+                                <span class="off"></span>
+                            </label>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <!-- This Page main contents : Liquor Area -->
+            <div class="liquorArea">
+                <div class="arrow left_arrow">
+                    <img class="backArr" src="../src/image/page 5/left_arrow.png" alt="left_arrow">
+                </div>
+                <div class="upperMenu">
+                    <ul>
+                        <li>
+                            <a href="./liquor_whiskey.html">Whiskey</a>
+                        </li>
+                        <li>
+                            <a href="./liquor_wine.html">Wine</a>
+                        </li>
+                        <li>
+                            <a href="./liquor_cocktail.html" style="color:white;">Cocktail</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cocktailArea">
+                    <div class="slideContents">
+                        <div class="imgArea">
+                            <img id="target" src="../src/image/page 20/tom.png">
+                        </div>
+                        <div class="explainArea">
+                            <p id="cocktail_title">TOM COLLINS</p>
+                            <p id="cocktail_explain">
+                                재미있는 것은 최초에 이 칵테일의 이름이 "톰"이 아니었다는 점입니다. 칵테일이 만들어졌던<br/>
+                                당시, 이를 고안한 런던의 웨이터의 이름을 그대로 따서 존 콜린스라고 불렀습니다. 그 후, 그대까지<br/>
+                                사용했던 네덜란드 산의 진을 영국의 올드 톰 진으로 재료를 바꾼 무렵부터 존 콜린스라는 이름이<br/>
+                                톰 콜린스로 바뀌었다고 합니다.<br/>
+                                베이스로 사용하는 진도 우여곡절을 겪었습니다. 1960년을 전후해서, 세계적으로 올드 톰진의<br/>
+                                사용이 감소되어서, 이후 톰 콜린스라고는 하지만 드라이진을 사용하는 것이 일반적입니다.
+                            </p>
+                            <div class="recipeArea">
+                                <p>Recipe</p>
+                                <img src="../src/image/page 20/tom_recipe.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/main.js"></script>
+        <script src="../js/listCocktail.js"></script>
+        <script>
+            const back_btn = document.querySelector(".backArr");
+
+            back_btn.addEventListener("click", ()=>{
+                window.location.href="./liquor_cocktail.html";
+            })
+        </script>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
+            import { getDatabase, ref, set, child, update, remove, onValue, get } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyB3pUnkTb9q-XLceiLcXmKdpiqiNOpa0mg",
+                authDomain: "abine-b526f.firebaseapp.com",
+                databaseURL: "https://abine-b526f-default-rtdb.firebaseio.com",
+                projectId: "abine-b526f",
+                storageBucket: "abine-b526f.appspot.com",
+                messagingSenderId: "866638993783",
+                appId: "1:866638993783:web:7fe7fe6e6b0c5e622b2972"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const db = getDatabase();
+
+            var temperature = document.getElementById("temperature");
+            var humidity = document.getElementById("humidity");
+            
+            function read_humidity(){
+                onValue(ref(db, "/humidity"), (snapshot)=>{
+                    const data = snapshot.val();
+                    console.log("Humidity Value : "+ data);
+                    humidity.innerText = data+"％";
+                });
+            }
+
+            function read_temperature(){
+                onValue(ref(db, "/temperature"), (snapshot)=>{
+                    const data = snapshot.val();
+                    console.log("temperature Value : "+ data);
+                    temperature.innerText = data+"℃";
+                });
+            }
+
+            setInterval(read_temperature, 50);
+            setInterval(read_humidity, 50);
+        </script>
+    </body>
+</html>

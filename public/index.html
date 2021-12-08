@@ -20,8 +20,9 @@
                     you more value than storage.
                     <br/>Beyond simple wine storage. we provides more comportable experience
                     <br/>such as recommendations, recipes, and controls through displays.</p>
-                    <!-- <button id="testBtn1" style="width: 50px; height: 25px;">호박색</button>
-                    <button id="testBtn0" style="width: 50px; height: 25px;">파란색</button> -->
+                    <button id="testBtn1" style="width: 50px; height: 25px;">호박색</button>
+                    <button id="testBtn0" style="width: 50px; height: 25px;">백색</button>
+                    <button id="btn_5x5ON" style="width: 50px; height: 25px;">LED</button>
                     <button
                         id="enterBtn"
                         type="button"
@@ -30,8 +31,8 @@
         </div>
         <script type="module">
             // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
-            import { getDatabase, ref, set, child, update, remove } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
+            import { getDatabase, ref, set, child, update, remove } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js";
             // TODO: Add SDKs for Firebase products that you want to use
             // https://firebase.google.com/docs/web/setup#available-libraries
             // Your web app's Firebase configuration
@@ -47,7 +48,7 @@
 
             // Initialize Firebase
             const app = initializeApp(firebaseConfig);
-            const db = getDatabase();
+            const db = getDatabase(app);
 
             var btn1 = document.getElementById("testBtn1");
             var btn0 = document.getElementById("testBtn0");
@@ -56,7 +57,7 @@
 
             function big_write_ON(){
                 update(ref(db, "/"), {
-                    BIGGER_ONE:1
+                    LED:1
                 })
                 .then(()=>{
                     alert("data stored success");

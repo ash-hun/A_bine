@@ -71,34 +71,88 @@
                     </ul>
                 </div>
                 <div class="cocktailArea">
-                    <div class="arrow left_arrow">
-                        <img src="../src/image/page 5/left_arrow.png" alt="left_arrow">
+                    <div class="arrow left_arrow" style="opacity:0;">
+                        <img class="leftArrImg" src="../src/image/page 5/left_arrow.png" alt="left_arrow">
                     </div>
                     <div class="slideContents">
-                        <div class="cocktail_item cocktail_01"></div>
-                        <div class="cocktail_item cocktail_02"></div>
-                        <div class="cocktail_item cocktail_03"></div>
-                        <div class="cocktail_item cocktail_04"></div>
-                        <div class="cocktail_item cocktail_05"></div>
-                        <div class="cocktail_item cocktail_06" style="display:none;"></div>
-                        <div class="cocktail_item cocktail_07" style="display:none;"></div>
-
+                        <div id="cocktail_01" class="cocktail_item">
+                            <p id="list_cosmo_explain">Cosmopolitan</p>
+                            <img src="../src/image/page 13/list_cosmo.png" alt="list_cosmo">
+                        </div>
+                        <div id="cocktail_02" class="cocktail_item">
+                            <p id="list_tom_explain">Tom Collins</p>
+                            <img src="../src/image/page 13/list_tom.png" alt="list_tom">
+                        </div>
+                        <div id="cocktail_03" class="cocktail_item">
+                            <p id="list_lagoon_explain">Blue Lagoon</p>
+                            <img src="../src/image/page 13/list_lagoon.png" alt="list_lagoon">
+                        </div>
+                        <div id="cocktail_04" class="cocktail_item">
+                            <p id="list_midori_explain">Midori Sour</p>
+                            <img src="../src/image/page 13/list_midori.png" alt="list_midori">
+                        </div>
+                        <div id="cocktail_05" class="cocktail_item">
+                            <p id="list_sling_explain">Singapre Sling</p>
+                            <img src="../src/image/page 13/list_sling.png" alt="list_sling">
+                        </div>
+                        <div id="cocktail_06" class="cocktail_item" style="display: none;">
+                            <p id="list_margarita_explain">Margarita</p>
+                            <img src="../src/image/page 13/list_magarita.png" alt="list_margarita">
+                        </div>
+                        <div id="cocktail_07" class="cocktail_item" style="display: none;">
+                            <p id="list_maitai_explain">Mai-Tai</p>
+                            <img src="../src/image/page 13/list_maitai.png" alt="list_maitai">
+                        </div>
                     </div>
                     <div class="arrow right_arrow">
-                        <img 
-                            src="../src/image/page 5/right_arrow.png" 
-                            alt="right_arrow"
-                            onclick="location.href='./liquor_whiskey_2.html'">
+                        <img class="rightArrImg" src="../src/image/page 5/right_arrow.png" alt="right_arrow">
                     </div>
                 </div>
             </div>
         </div>
         <script src="../js/main.js"></script>
-        <script src="../js/setting.js"></script>
+        <script src="../js/listCocktail.js"></script>
+        <script>
+            const cocktail_01 = document.querySelector("#cocktail_01");
+            const cocktail_02 = document.querySelector("#cocktail_02");
+            const cocktail_03 = document.querySelector("#cocktail_03");
+            const cocktail_04 = document.querySelector("#cocktail_04");
+            const cocktail_05 = document.querySelector("#cocktail_05");
+            const cocktail_06 = document.querySelector("#cocktail_06");
+            const cocktail_07 = document.querySelector("#cocktail_07");
+
+            cocktail_01.addEventListener("click", ()=>{
+                window.location.href="./liquor_cocktail_cosmo.html";
+            })
+
+            cocktail_02.addEventListener("click", ()=>{
+                window.location.href="./liquor_cocktail_tom.html";
+            })
+
+            cocktail_03.addEventListener("click", ()=>{
+                window.location.href="./liquor_cocktail_lagoon.html";
+            })
+
+            cocktail_04.addEventListener("click", ()=>{
+                window.location.href="./liquor_cocktail_midori.html";
+            })
+
+            cocktail_05.addEventListener("click", ()=>{
+                window.location.href="./liquor_cocktail_sling.html";
+            })
+
+            cocktail_06.addEventListener("click", ()=>{
+                window.location.href="./liquor_cocktail_magarita.html";
+            })
+
+            cocktail_07.addEventListener("click", ()=>{
+                window.location.href="./liquor_cocktail_maitai.html";
+            })
+        </script>
         <script type="module">
             // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
-            import { getDatabase, ref, set, child, update, remove, onValue, get } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
+            import { getDatabase, ref, set, child, update, remove, onValue, get } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js";
             // TODO: Add SDKs for Firebase products that you want to use
             // https://firebase.google.com/docs/web/setup#available-libraries
             // Your web app's Firebase configuration

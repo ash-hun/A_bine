@@ -73,6 +73,10 @@
     align-items: center;
 }
 
+.not{
+    display:none;
+}
+
 .arrow {
     width: 64px;
     cursor: pointer;
@@ -95,5 +99,20 @@
 
 .cocktail_item {
     width: 20%;
-    height: inherit;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cocktail_item img{
+    width: 80%;
+    contain: cover;
+}
+
+.cocktail_item p{
+    color: white;
+    writing-mode: vertical-lr;
+    transform: rotate(-90);
 }

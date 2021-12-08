@@ -22,7 +22,6 @@
                 </div>
                 <div id="showing">
                     <div class="valueWrapper">
-                        <!---  Data Binding for Real value  --->
                         <div class="temp">
                             <p id="temperature"></p>
                         </div>
@@ -69,13 +68,11 @@
             </div>
         </div>
         <script src="../js/main.js"></script>
+        <script src="../js/selectOffer.js"></script>
         <script type="module">
-            // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
-            import { getDatabase, ref, set, child, update, remove, onValue, get } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
-            // Your web app's Firebase configuration
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
+            import { getDatabase, ref, set, child, update, remove, onValue, get } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js";
+            
             const firebaseConfig = {
                 apiKey: "AIzaSyB3pUnkTb9q-XLceiLcXmKdpiqiNOpa0mg",
                 authDomain: "abine-b526f.firebaseapp.com",
@@ -88,7 +85,7 @@
 
             // Initialize Firebase
             const app = initializeApp(firebaseConfig);
-            const db = getDatabase();
+            const db = getDatabase(app);
 
             var temperature = document.getElementById("temperature");
             var humidity = document.getElementById("humidity");
@@ -96,7 +93,7 @@
             function read_humidity(){
                 onValue(ref(db, "/humidity"), (snapshot)=>{
                     const data = snapshot.val();
-                    console.log("Humidity Value : "+ data);
+                    // console.log("Humidity Value : "+ data);
                     humidity.innerText = data+"％";
                 });
             }
@@ -104,7 +101,7 @@
             function read_temperature(){
                 onValue(ref(db, "/temperature"), (snapshot)=>{
                     const data = snapshot.val();
-                    console.log("temperature Value : "+ data);
+                    // console.log("temperature Value : "+ data);
                     temperature.innerText = data+"℃";
                 });
             }

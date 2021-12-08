@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/headNav.css">
+        <link rel="stylesheet" href="../css/offer_cloudy.css">
+        <title>A-Bine</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <div id="home">
+                    <a href="./main.html">
+                        <img src="./../src/image/page 2/test.png" alt="home"/>
+                    </a>
+                </div>
+                <div id="showing">
+                    <div class="valueWrapper">
+                        <div class="temp">
+                            <p id="temperature"></p>
+                        </div>
+                        <p id="humidity"></p>
+                    </div>
+                </div>
+                <a href="#" class="menu-trigger" id="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div id="menuWrap" class="clicked">
+                <nav id="menu">
+                    <ul class="menulist">
+                        <li class="listStyle">
+                            <a href="./liquor_wine.html">Liquor</a>
+                        </li>
+                        <li class="listStyle">
+                            <a href="./mood.html">Mood</a>
+                        </li>
+                        <li class="listStyle">
+                            <a href="../view/offer_cloudy.html">Offer</a>
+                        </li>
+                        <div class="lightSwtich">
+                            <img src="../src/image/page 3/light_icon.png" alt="wineCeller_innerLight">
+                            <input type="checkbox" id="switch1" name="switch1" class="input__on-off">
+                            <label for="switch1" class="label__on-off">
+                                <span class="marble"></span>
+                                <span class="on"></span>
+                                <span class="off"></span>
+                            </label>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <!-- This Page main contents : Offer Area -->
+            <div class="offerArea">
+                <div class="recommand">
+                    <div class="explain">
+                        <h1 id="explain_category">TODAY'S DRINK</h1>
+                        <h1 id="explain_wine">TAYLOR'S SELECT<br/>RESERVE PORT</h1>
+                        <p id="explain_contents">
+                            짙은 루비색으로, 짙은 과일 향이 느껴지는 와인입니다. 입안을 가득 채우는 진한 과일의<br/>
+                            맛을 가진 풀바디의 와인으로 긴 여운과 달콤함이 입안 가득 채워지게 만들어줍니다.
+                        </p>
+
+                        <p id="explain_details">
+                            Type : Port wine<br/>
+                            Alcohol : 20<br/>
+                            Origin/Country : Portugal
+                        </p>
+                    </div>
+                    <div class="recommand_target">
+                        <img class="weather_cloudy" src="../src/image/page 22/cloudy_wine.png" alt="cloudy_wine">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/main.js"></script>
+        <script src="../js/setting.js"></script>
+        <script src="../js/firebase_importData.js"></script>
+    </body>
+</html>
+</html>
