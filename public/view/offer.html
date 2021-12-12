@@ -43,7 +43,7 @@
                         <li class="listStyle">
                             <a href="./offer.html">Offer</a>
                         </li>
-                        <div class="lightSwtich">
+                        <!-- <div class="lightSwtich">
                             <img src="../src/image/page 3/light_icon.png" alt="wineCeller_innerLight">
                             <input type="checkbox" id="switch1" name="switch1" class="input__on-off">
                             <label for="switch1" class="label__on-off">
@@ -51,7 +51,7 @@
                                 <span class="on"></span>
                                 <span class="off"></span>
                             </label>
-                        </div>
+                        </div> -->
                     </ul>
                 </nav>
             </div>
@@ -83,9 +83,6 @@
         </div>
         <script src="../js/main.js"></script>
         <script src="../js/setting.js"></script>
-<<<<<<< HEAD
-        <script src="../js/firebase_importData.js"></script>
-=======
         <script type="module">
             // Import the functions you need from the SDKs you need
             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
@@ -109,6 +106,10 @@
 
             var temperature = document.getElementById("temperature");
             var humidity = document.getElementById("humidity");
+            let wine_01=1;
+            let wine_02=1;
+            let wine_03=1;
+            let wine_04=1;
             
             function read_humidity(){
                 onValue(ref(db, "/humidity"), (snapshot)=>{
@@ -126,10 +127,50 @@
                 });
             }
 
+            function sense_wine_category(){
+                onValue(ref(db, "/wine_01"), (snapshot)=>{
+                    wine_01 = snapshot.val();
+                });
+                onValue(ref(db, "/wine_02"), (snapshot)=>{
+                    wine_02 = snapshot.val();
+                });
+                onValue(ref(db, "/wine_03"), (snapshot)=>{
+                    wine_03 = snapshot.val();
+                });
+                onValue(ref(db, "/wine_04"), (snapshot)=>{
+                    wine_04 = snapshot.val();
+                });
+
+                if(wine_01 == 0){
+                    location.href="./liquor_wine.html";
+                    wine_02 = 1;
+                    wine_03 = 1;
+                    wine_04 = 1;
+                }
+                else if(wine_02 == 0){
+                    location.href="./liquor_wine_2.html";
+                    wine_01 = 1;
+                    wine_03 = 1;
+                    wine_04 = 1;
+                }
+                else if(wine_03 == 0){
+                    location.href="./liquor_wine_3.html";
+                    wine_01 = 1;
+                    wine_02 = 1;
+                    wine_04 = 1;
+                }
+                else if(wine_04 == 0){
+                    location.href="./liquor_wine_4.html";
+                    wine_01 = 1;
+                    wine_02 = 1;
+                    wine_04 = 1;
+                }
+            }
+
+            setInterval(sense_wine_category, 10);
             setInterval(read_temperature, 50);
             setInterval(read_humidity, 50);
         </script>
->>>>>>> 9ab912db2c3f3a710e371c146ed51303afbc4a0a
     </body>
 </html>
 </html>

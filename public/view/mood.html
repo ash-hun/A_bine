@@ -41,9 +41,9 @@
                             <a href="./mood.html">Mood</a>
                         </li>
                         <li class="listStyle">
-                            <a href="./offer.html">Offer</a>
+                            <a href="./offer_cloudy.html">Offer</a>
                         </li>
-                        <div class="lightSwtich">
+                        <!-- <div class="lightSwtich">
                             <img src="../src/image/page 3/light_icon.png" alt="wineCeller_innerLight">
                             <input type="checkbox" id="switch1" name="switch1" class="input__on-off">
                             <label for="switch1" class="label__on-off">
@@ -51,7 +51,7 @@
                                 <span class="on"></span>
                                 <span class="off"></span>
                             </label>
-                        </div>
+                        </div> -->
                     </ul>
                 </nav>
             </div>
@@ -94,11 +94,6 @@
             </div>
         </div>
         <script src="../js/main.js"></script>
-<<<<<<< HEAD
-        <script src="../js/setting.js"></script>
-        <script src="../js/firebase_importData.js"></script>
-        <script src="../js/mood.js"></script>
-=======
         <script src="../js/mood.js"></script>
         <script type="module">
             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
@@ -120,11 +115,15 @@
 
             var temperature = document.getElementById("temperature");
             var humidity = document.getElementById("humidity");
+            let wine_01=1;
+            let wine_02=1;
+            let wine_03=1;
+            let wine_04=1;
             
             function read_humidity(){
                 onValue(ref(db, "/humidity"), (snapshot)=>{
                     const data = snapshot.val();
-                    console.log("Humidity Value : "+ data);
+                    // console.log("Humidity Value : "+ data);
                     humidity.innerText = data+"％";
                 });
             }
@@ -132,15 +131,466 @@
             function read_temperature(){
                 onValue(ref(db, "/temperature"), (snapshot)=>{
                     const data = snapshot.val();
-                    console.log("temperature Value : "+ data);
+                    // console.log("temperature Value : "+ data);
                     temperature.innerText = data+"℃";
                 });
             }
 
-            setInterval(read_temperature, 50);
-            setInterval(read_humidity, 50);
+            // function sense_wine_category(){
+            //     onValue(ref(db, "/wine_01"), (snapshot)=>{
+            //         wine_01 = snapshot.val();
+            //     });
+            //     onValue(ref(db, "/wine_02"), (snapshot)=>{
+            //         wine_02 = snapshot.val();
+            //     });
+            //     onValue(ref(db, "/wine_03"), (snapshot)=>{
+            //         wine_03 = snapshot.val();
+            //     });
+            //     onValue(ref(db, "/wine_04"), (snapshot)=>{
+            //         wine_04 = snapshot.val();
+            //     });
+
+            //     if(wine_01 == 0){
+            //         location.href="./liquor_wine.html";
+            //         wine_02 = 1;
+            //         wine_03 = 1;
+            //         wine_04 = 1;
+            //     }
+            //     else if(wine_02 == 0){
+            //         location.href="./liquor_wine_2.html";
+            //         wine_01 = 1;
+            //         wine_03 = 1;
+            //         wine_04 = 1;
+            //     }
+            //     else if(wine_03 == 0){
+            //         location.href="./liquor_wine_3.html";
+            //         wine_01 = 1;
+            //         wine_02 = 1;
+            //         wine_04 = 1;
+            //     }
+            //     else if(wine_04 == 0){
+            //         location.href="./liquor_wine_4.html";
+            //         wine_01 = 1;
+            //         wine_02 = 1;
+            //         wine_04 = 1;
+            //     }
+            // }
+
+            // Color Component Controller
+            const red = document.querySelector("#color_11");
+            const burgundi = document.querySelector("#color_12");
+            const pink = document.querySelector("#color_13");
+            const orange = document.querySelector("#color_14");
+            const yellow = document.querySelector("#color_15");
+            const green = document.querySelector("#color_16");
+            const skyblue = document.querySelector("#color_21");
+            const darkblue = document.querySelector("#color_22");
+            const lightPurple = document.querySelector("#color_23");
+            const purple = document.querySelector("#color_24");
+            const realPurple = document.querySelector("#color_25");
+            const white = document.querySelector("#color_26");
+
+            // Color background component
+            const CLOCKING = "clocking";
+            const circle_on = document.querySelector(".circle_on");
+            const circle_off = document.querySelector(".circle_off");
+            const circle_red = document.querySelector(".circle_red");
+            const circle_burgundi = document.querySelector(".circle_burgundi");
+            const circle_pink = document.querySelector(".circle_pink");
+            const circle_orange = document.querySelector(".circle_orange");
+            const circle_yellow = document.querySelector(".circle_yellow");
+            const circle_green = document.querySelector(".circle_green");
+            const circle_skyblue = document.querySelector(".circle_skyblue");
+            const circle_darkblue = document.querySelector(".circle_darkblue");
+            const circle_lightPurple = document.querySelector(".circle_lightPurple");
+            const circle_purple = document.querySelector(".circle_purple");
+            const circle_realPurple = document.querySelector(".circle_realPurple");
+            let var_list = 
+                [circle_on, 
+                    circle_off, 
+                    circle_red, 
+                    circle_burgundi, 
+                    circle_pink, 
+                    circle_orange, 
+                    circle_yellow,
+                    circle_green,
+                    circle_skyblue,
+                    circle_darkblue,
+                    circle_lightPurple,
+                    circle_purple,
+                    circle_realPurple];
+
+            function selectRED(){
+                var_list.forEach(element => {
+                    if(element !== circle_red){
+                        element.classList.add(CLOCKING);
+                    }
+                    else{
+                        element.classList.remove(CLOCKING);
+                    }
+                });
+
+                update(ref(db, "/"), {
+                    smarthome_LED:1,
+                    smarthome_R:212,
+                    smarthome_G:12,
+                    smarthome_B:4
+                })
+                .then(()=>{
+                    console.log("change mood red");
+                })
+                .catch((error)=>{
+                    console.log("unsuccessful, error"+error);
+                });
+            }
+
+            function selectBURGUNDI(){
+                var_list.forEach(element => {
+                    if(element !== circle_burgundi){
+                        element.classList.add(CLOCKING);
+                    }
+                    else{
+                        element.classList.remove(CLOCKING);
+                    }
+                });
+
+                update(ref(db, "/"), {
+                    smarthome_LED:1,
+                    smarthome_R:111,
+                    smarthome_G:30,
+                    smarthome_B:34
+                })
+                .then(()=>{
+                    console.log("change mood burgundi");
+                })
+                .catch((error)=>{
+                    console.log("unsuccessful, error"+error);
+                });
+            }
+
+            function selectPINK(){
+                var_list.forEach(element => {
+                    if(element !== circle_pink){
+                        element.classList.add(CLOCKING);
+                    }
+                    else{
+                        element.classList.remove(CLOCKING);
+                    }
+                });
+
+                update(ref(db, "/"), {
+                    smarthome_LED:1,
+                    smarthome_R:218,
+                    smarthome_G:126,
+                    smarthome_B:169
+                })
+                .then(()=>{
+                    console.log("change mood pink");
+                })
+                .catch((error)=>{
+                    console.log("unsuccessful, error"+error);
+                });
+            }
+
+            function selectORANGE(){
+                var_list.forEach(element => {
+                    if(element !== circle_orange){
+                        element.classList.add(CLOCKING);
+                    }
+                    else{
+                        element.classList.remove(CLOCKING);
+                    }
+                });
+
+                update(ref(db, "/"), {
+                    smarthome_LED:1,
+                    smarthome_R:238,
+                    smarthome_G:115,
+                    smarthome_B:19
+                })
+                .then(()=>{
+                    console.log("change mood orange");
+                })
+                .catch((error)=>{
+                    console.log("unsuccessful, error"+error);
+                });
+            }
+
+            function selectYELLOW(){
+                var_list.forEach(element => {
+                    if(element !== circle_yellow){
+                        element.classList.add(CLOCKING);
+                    }
+                    else{
+                        element.classList.remove(CLOCKING);
+                    }
+                });
+
+                update(ref(db, "/"), {
+                    smarthome_LED:1,
+                    smarthome_R:248,
+                    smarthome_G:182,
+                    smarthome_B:45
+                })
+                .then(()=>{
+                    console.log("change mood yellow");
+                })
+                .catch((error)=>{
+                    console.log("unsuccessful, error"+error);
+                });
+            }
+
+            function selectGREEN(){
+                var_list.forEach(element => {
+                    if(element !== circle_green){
+                        element.classList.add(CLOCKING);
+                    }
+                    else{
+                        element.classList.remove(CLOCKING);
+                    }
+                });
+
+                update(ref(db, "/"), {
+                    smarthome_LED:1,
+                    smarthome_R:165,
+                    smarthome_G:203,
+                    smarthome_B:26
+                })
+                .then(()=>{
+                    console.log("change mood green");
+                })
+                .catch((error)=>{
+                    console.log("unsuccessful, error"+error);
+                });
+            }
+
+            function selectSKYBLUE(){
+                var_list.forEach(element => {
+                    if(element !== circle_skyblue){
+                        element.classList.add(CLOCKING);
+                    }
+                    else{
+                        element.classList.remove(CLOCKING);
+                    }
+                });
+
+                update(ref(db, "/"), {
+                    smarthome_LED:1,
+                    smarthome_R:53,
+                    smarthome_G:122,
+                    smarthome_B:191
+                })
+                .then(()=>{
+                    console.log("change mood skyblue");
+                })
+                .catch((error)=>{
+                    console.log("unsuccessful, error"+error);
+                });
+            }
+
+            function selectDARKBLUE(){
+                var_list.forEach(element => {
+                    if(element !== circle_darkblue){
+                        element.classList.add(CLOCKING);
+                    }
+                    else{
+                        element.classList.remove(CLOCKING);
+                    }
+                });
+
+                update(ref(db, "/"), {
+                    smarthome_LED:1,
+                    smarthome_R:19,
+                    smarthome_G:43,
+                    smarthome_B:141
+                })
+                .then(()=>{
+                    console.log("change mood deepblue");
+                })
+                .catch((error)=>{
+                    console.log("unsuccessful, error"+error);
+                });
+            }
+
+            function selectLIGHTPURPLE(){
+                var_list.forEach(element => {
+                    if(element !== circle_lightPurple){
+                        element.classList.add(CLOCKING);
+                    }
+                    else{
+                        element.classList.remove(CLOCKING);
+                    }
+                });
+
+                update(ref(db, "/"), {
+                    smarthome_LED:1,
+                    smarthome_R:67,
+                    smarthome_G:61,
+                    smarthome_B:150
+                })
+                .then(()=>{
+                    console.log("change mood lightpurple");
+                })
+                .catch((error)=>{
+                    console.log("unsuccessful, error"+error);
+                });
+            }
+
+            function selectPURPLE(){
+                var_list.forEach(element => {
+                    if(element !== circle_purple){
+                        element.classList.add(CLOCKING);
+                    }
+                    else{
+                        element.classList.remove(CLOCKING);
+                    }
+                });
+
+                update(ref(db, "/"), {
+                    smarthome_LED:1,
+                    smarthome_R:79,
+                    smarthome_G:62,
+                    smarthome_B:149
+                })
+                .then(()=>{
+                    console.log("change mood purple");
+                })
+                .catch((error)=>{
+                    console.log("unsuccessful, error"+error);
+                });
+            }
+
+            function selectREALPURPLE(){
+                var_list.forEach(element => {
+                    if(element !== circle_realPurple){
+                        element.classList.add(CLOCKING);
+                    }
+                    else{
+                        element.classList.remove(CLOCKING);
+                    }
+                });
+
+                update(ref(db, "/"), {
+                    smarthome_LED:1,
+                    smarthome_R:122,
+                    smarthome_G:74,
+                    smarthome_B:154
+                })
+                .then(()=>{
+                    console.log("change mood realPurple");
+                })
+                .catch((error)=>{
+                    console.log("unsuccessful, error"+error);
+                });
+            }
+
+            function selectWHITE(){
+                var_list.forEach(element => {
+                    if(element !== circle_on){
+                        element.classList.add(CLOCKING);
+                    }
+                    else{
+                        element.classList.remove(CLOCKING);
+                    }
+                });
+
+                update(ref(db, "/"), {
+                    smarthome_LED:1,
+                    smarthome_R:255,
+                    smarthome_G:255,
+                    smarthome_B:255
+                })
+                .then(()=>{
+                    console.log("change mood white");
+                })
+                .catch((error)=>{
+                    console.log("unsuccessful, error"+error);
+                });
+            }
+
+            function moodTurnON(){
+                var_list.forEach(element => {
+                    if(element === circle_off){
+                        element.classList.add(CLOCKING);
+                    }
+                    else if(element === circle_on){
+                        element.classList.remove(CLOCKING);
+                    }
+                    else{
+                        element.classList.add(CLOCKING);
+                    }
+                });
+
+                update(ref(db, "/"), {
+                    smarthome_LED:1,
+                    smarthome_R:255,
+                    smarthome_G:255,
+                    smarthome_B:255
+                })
+                .then(()=>{
+                    console.log("change mood white");
+                })
+                .catch((error)=>{
+                    console.log("unsuccessful, error"+error);
+                });
+            }
+
+            function moodTurnOFF(){
+                var_list.forEach(element => {
+                    if(element === circle_on){
+                        element.classList.add(CLOCKING);
+                    }
+                    else if(element === circle_off){
+                        element.classList.remove(CLOCKING);
+                    }
+                    else{
+                        element.classList.add(CLOCKING);
+                    }
+                });
+
+                update(ref(db, "/"), {
+                    smarthome_LED:0,
+                    smarthome_R:0,
+                    smarthome_G:0,
+                    smarthome_B:0
+                })
+                .then(()=>{
+                    console.log("change mood white");
+                })
+                .catch((error)=>{
+                    console.log("unsuccessful, error"+error);
+                });
+            }
+
+            circle_off.addEventListener("click", moodTurnON);
+            circle_on.addEventListener("click", moodTurnOFF);
+            circle_red.addEventListener("click", moodTurnOFF);
+            circle_burgundi.addEventListener("click", moodTurnOFF);
+            circle_pink.addEventListener("click", moodTurnOFF);
+            circle_orange.addEventListener("click", moodTurnOFF);
+            circle_yellow.addEventListener("click", moodTurnOFF);
+            circle_green.addEventListener("click", moodTurnOFF);
+            circle_skyblue.addEventListener("click", moodTurnOFF);
+            circle_darkblue.addEventListener("click", moodTurnOFF);
+            circle_lightPurple.addEventListener("click", moodTurnOFF);
+            circle_purple.addEventListener("click", moodTurnOFF);
+            circle_realPurple.addEventListener("click", moodTurnOFF);
+            red.addEventListener("click", selectRED);
+            burgundi.addEventListener("click", selectBURGUNDI);
+            pink.addEventListener("click", selectPINK);
+            orange.addEventListener("click", selectORANGE);
+            yellow.addEventListener("click", selectYELLOW);
+            green.addEventListener("click", selectGREEN);
+            skyblue.addEventListener("click", selectSKYBLUE);
+            darkblue.addEventListener("click", selectDARKBLUE);
+            lightPurple.addEventListener("click", selectLIGHTPURPLE);
+            purple.addEventListener("click", selectPURPLE);
+            realPurple.addEventListener("click", selectREALPURPLE);
+            white.addEventListener("click", selectWHITE);
+
+            setInterval(read_temperature, 10);
+            setInterval(read_humidity, 10);
         </script>
->>>>>>> 9ab912db2c3f3a710e371c146ed51303afbc4a0a
     </body>
 </html>
 </html>

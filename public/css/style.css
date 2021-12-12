@@ -51,7 +51,8 @@ video{
 
 #enterBtn {
     width: 202.85px;
-    height: 56.25px;
+    height: 54px;
+    text-align: center;
     margin-top: 7%;
     font-family: YoonGothic330;
     font-size: 22.5px;

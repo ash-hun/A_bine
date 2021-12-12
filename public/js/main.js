@@ -10,7 +10,7 @@ function toggleStyle() {
     }
     else{
         menuWrap.classList.remove(CLICKED_CLASS);
-        menuWrap.style.zIndex="1";
+        menuWrap.style.zIndex="3";
     }
 }
 
