@@ -35,3 +35,6 @@
 
 ## **💻 A-Bine Service Architecture**
 ![service Architecture](https://github.com/JH9892/A_bine/blob/main/ref/Service%20Architecture/Prototype%20Architecture.png)  
+
+## **⚙ CopyRight**
+  Copyright 2021.12. Contributor (JH9892, YSG9808), All of contents cannot be copied without contributor's permission.
