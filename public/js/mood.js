@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+// Color component
+=======
 // Color Component Controller
+>>>>>>> 9ab912db2c3f3a710e371c146ed51303afbc4a0a
 const red = document.querySelector("#color_11");
 const burgundi = document.querySelector("#color_12");
 const pink = document.querySelector("#color_13");
