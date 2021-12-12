@@ -1,14 +1,17 @@
 <div>
-  <h1 align="center"><i>A-Bine</i></h1>
+  <h3 align="center"><i><b>A-Bine</b></i></h3>
 </div>
 
-    분위기에 취해보세요, A-Bine
+<div align="center"><code>A-Bine, So that you don't mmiss a single drop of pleasure</code></div><br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/ v3.7.3-11B48A?style=flat&logo=Python&logoColor=white">
-  <img src="https://img.shields.io/badge/ v20.04-E95420?style=flat&logo=Ubuntu&logoColor=white">
-  <img src="https://img.shields.io/badge/ v2.4.0-FF6F00?style=flat&logo=TensorFlow&logoColor=white">
-  <img src="https://img.shields.io/badge/ v2.0.1-000000?style=flat&logo=Flask&logoColor=white">
+  <img src="https://img.shields.io/badge/ HTML5-E34F26?style=flat&logo=HTML5&logoColor=ffffff">
+  <img src="https://img.shields.io/badge/ CSS3-1572B6?style=flat&logo=CSS3&logoColor=ffffff">
+  <img src="https://img.shields.io/badge/ JavaScript ES7-F7DF1E?style=flat&logo=JavaScript&logoColor=ffffff">
+  <img src="https://img.shields.io/badge/ Node v16.13.0-339933?style=flat&logo=Node.js&logoColor=ffffff">
+  <img src="https://img.shields.io/badge/ Firebase v9.6.0-FF7139?style=flat&logo=Firebase&logoColor=FFCA28"><br/>
+  <img src="https://img.shields.io/badge/ Wifi D1 R1-00979D?style=flat&logo=Arduino&logoColor=ffffff">
+  <img src="https://img.shields.io/badge/ Raspberry Pi 4-A22846?style=flat&logo=Raspberry Pi&logoColor=ffffff">
 </div>
 
 ## **🤟 Contributor**
