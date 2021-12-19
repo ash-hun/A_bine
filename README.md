@@ -30,8 +30,8 @@
 
 ## *Contents*
 **👉 [Project Wiki](https://hunspace.notion.site/A-Bine-a4fa152edd3645afb18cb5e019446d34)**  
-**👉 [Meeting Logs]()**  
-**👉 [Technical Docs]()**  
+**👉 [Meeting Logs](https://hunspace.notion.site/Meeting-Log-6cd20d1714ff4a7bb36ccf3c087bd464)**  
+**👉 [Technical Docs](https://hunspace.notion.site/Dev-Story-9f43764f02d04ecd9b1dd9d9f3c94cee)**  
 
 ## *A-Bine Service Architecture*
 ![service Architecture](https://github.com/JH9892/A_bine/blob/main/ref/Service%20Architecture/Prototype%20Architecture.png)  
