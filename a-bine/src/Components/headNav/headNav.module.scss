@@ -1,0 +1,84 @@
+.headerContainer{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    color: white;
+}
+
+.homeLink{
+    width: 15vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.homeLinkWraper{
+    width: 20%;
+    height: 20%;
+}
+
+.homeIcon {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.showData{
+    width: 15vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataWraper{
+    width: 6vw;
+    height: 6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.temperature{
+    font-size: 1.5rem;
+}
+
+.humidity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 6vw;
+    height: 6vh;
+    font-size: 1.5rem;
+}
+
+.menuLink{
+    width: 15vw;
+    height:15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.openMenu{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.6);
+    z-index: 100;
+}
+.menuList{
+    color: white;
+}

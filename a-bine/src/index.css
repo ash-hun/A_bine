@@ -1,10 +1,45 @@
-body {
+@font-face {
+  font-family: Hills;
+  src: url("./Assets/font/HillsofMarbellaalt.-Regular.otf");
+}
+
+@font-face {
+  font-family: Aqala;
+  src: url("./Assets/font/Aqala\ Display\ Free.ttf");
+}
+
+@font-face {
+  font-family: YoonGothic330;
+  src: url("./Assets/font/윤고딕330.ttf");
+}
+
+@font-face {
+  font-family: YoonGothic320;
+  src: url("./Assets/font/윤고딕320.ttf");
+}
+
+@font-face{
+  font-family: GimhaeB;
+  src: url("./Assets/font/GimhaeGayaB.otf");
+}
+
+@font-face{
+  font-family: GimhaeR;
+  src: url("./Assets/font/GimhaeGayaR.otf");
+}
+
+/*-------------- Basic Setting --------------*/
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid black;
+  overflow: hidden;
 }
 
 code {
